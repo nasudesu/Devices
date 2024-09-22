@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Group, Artifact, Version -->
+  <groupId>Harj1</groupId>
+  <artifactId>Harj1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <!-- Build Section -->
+  <build>
+    <!-- Custom Source Directory -->
+    <sourceDirectory>src</sourceDirectory>
+
+    <!-- Resource Exclusion -->
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude> <!-- Exclude Java files from resources -->
+        </excludes>
+      </resource>
+    </resources>
+
+    <!-- Plugins Configuration -->
+    <plugins>
+      <!-- Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version> <!-- Use the latest version -->
+        <configuration>
+          <source>21</source> <!-- Set Java 21 as the source -->
+          <target>21</target> <!-- Set Java 21 as the target -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Dependencies -->
+  <dependencies>
+    <!-- Jakarta Persistence API -->
+    <dependency>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <!-- Hibernate Core -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>6.0.0.Final</version>
+    </dependency>
+
+    <!-- MySQL Connector -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.28</version>
+    </dependency>
+
+  </dependencies>
+
+</project>
